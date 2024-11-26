@@ -6,7 +6,9 @@
          <el-tab-pane label="用户配置" name="user">
             <User />
          </el-tab-pane>
-         <el-tab-pane label="所得规则" name="rules"></el-tab-pane>
+         <el-tab-pane label="所得规则" name="rules">
+            <Rules />
+         </el-tab-pane>
       </el-tabs>
 
 
@@ -15,22 +17,9 @@
 
 <script setup>
 
-import { Search, Edit, Setting } from '@element-plus/icons-vue'
-import useConfigStore from '@/store/modules/configCenter'
 import User from '@/views/settlement/settlementConfig/user'
+import Rules from '@/views/settlement/settlementConfig/rules'
 const activeTab = ref('user')
-const configStore = useConfigStore()
-
-const search = reactive({
-   store: '',
-   identity: '',
-   position: '',
-   keyword: ''
-})
-const tableData = ref()
-configStore.listConfig().then((res) => {
-   tableData.value = res
-})
 
 </script>
 
