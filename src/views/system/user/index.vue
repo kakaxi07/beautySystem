@@ -6,7 +6,7 @@
             <div class="head-container">
                <el-input
                   v-model="deptName"
-                  placeholder="请输入部门名称"
+                  placeholder="请输入部门名称1"
                   clearable
                   prefix-icon="Search"
                   style="margin-bottom: 20px"
